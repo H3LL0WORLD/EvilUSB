@@ -400,7 +400,7 @@ Function EvilUSB:Infect {
         #EvilUSB:Print 1 $LANG[21]
     }
 
-    $RemoveScript? = Invoke-PromptForChoice -Title 'Auto-eliminar script' -Message 'Eliminar script de infeccin despues de su ejecucion?' -Options (('&Yes','Auto-eliminar payload'),('&No','No auto-eliminar'),('&Cancel','Volver al menu principal'))
+    $RemoveScript? = Invoke-PromptForChoice -Title 'Auto-eliminar script' -Message 'Eliminar script de infeccion despues de su ejecucion?' -Options (('&Yes','Auto-eliminar payload'),('&No','No auto-eliminar'),('&Cancel','Volver al menu principal'))
     Switch ($RemoveScript?) {
         1 {
             # No

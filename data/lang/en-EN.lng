@@ -1,0 +1,33 @@
+EvilUSB
+Hello
+Select your device
+Drive letter: 
+Press Enter to try again
+No devices have been found
+payloads loaded currently
+Using 
+Nothing to write
+Do you want to hide the payload? [y/N] 
+Do you want to auto-remove the payload after executed? [y/N] 
+Do you want to overwrite it? [y/N] 
+A payload have been found
+OverWriting payload
+Nothing was writed
+Writing payload to
+Hidding payload...
+Done
+Which format file do you want to use?
+Using bat format...
+Using vbs format...
+Bad format file, try again...
+An infect script have been found
+Do you want to overwrite it? [y/N]
+Overwriting infection script
+Nothing was writed
+Writing infect script to
+Success
+Adding payload...
+Quiting payload...
+No command found
+Use 'Help' to get help
+Mmm looks like like you are trying to add a payload that you have added already...

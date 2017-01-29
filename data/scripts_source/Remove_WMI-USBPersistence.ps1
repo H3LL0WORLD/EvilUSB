@@ -1,0 +1,3 @@
+Get-WmiObject __EventFilter -NameSpace ROOT\subscription -Filter {Name='$FilterName'} | Remove-WmiObject -ErrorAction SilentlyContinue
+Get-WmiObject CommandLineEventConsumer -NameSpace ROOT\subscription -Filter {Name='$ConsumerName'} | Remove-WmiObject -ErrorAction SilentlyContinue
+Get-WmiObject __FilterToConsumerBinding -NameSpace ROOT\subscription | Where-Object {$_.Consumer.Contains('$ConsumerName') -and $_.Filter.Contains('$FilterName')} | Remove-WmiObject -ErrorAction SilentlyContinue

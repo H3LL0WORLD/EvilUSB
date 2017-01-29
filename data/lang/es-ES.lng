@@ -1,0 +1,33 @@
+EvilUSB
+Hello
+Selecciona tu dispositivo
+Letra dispositivo: 
+Presiona enter para intentar de nuevo
+No se ha detectado ningun dispositivo
+payloads cargados actualmente
+Usando 
+Nada para escribir
+Quieres ocultar el payload?
+Quieres que el payload se elimine automaticamente una vez se haya ejecutado?
+Quieres reemplazarlo?
+Un payload ha sido encontrado
+Reemplazando payload
+Nada ha sido escrito
+Escribiendo payload a
+Ocultando payload...
+Hecho
+Que tipo de script quieres usar?
+Usando formato bat...
+Usando formato vbs...
+Formato incorrecto, intenta de nuevo...
+Un script de infeccion ha sido encontrado
+Quieres reemplazarlo?
+Sobre-escribiendo script de infeccion
+Nada ha sido escrito
+Escribiendo script de infeccion a
+Hecho
+Agregando payload...
+Quitando payload...
+Comando no encontrado
+Usa 'Help' para obtener ayuda
+Parece que estas intentando agregar un payload que ya has agregado

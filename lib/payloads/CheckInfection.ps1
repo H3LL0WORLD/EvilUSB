@@ -104,7 +104,7 @@ Function Main {
 Function Add-Payload {
 	# This function will be executed once the user run the 'add' command, this mean that the options should be already filled
 	
-	$Command = 'MSG * "' + $Options.Message.Value + '";'
+	$Command = '."$env:windir\System32\msg.exe" * "' + $Options.Message.Value + '";'
 	
 	# Finally, you need to put he payload code into the '$PayloadCode' variable, which will be added to the stack of payloads
 	$PayloadCode = $Command

